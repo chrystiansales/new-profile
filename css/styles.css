@@ -292,9 +292,15 @@ button:hover {
     }
 
     nav ul {
-        flex-direction: row; /* Mantém os itens lado a lado */
-        flex-wrap: nowrap;
-        justify-content: center;
+        flex-wrap: nowrap; /* Garante que os itens fiquem em uma única linha */
+        overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+        padding: 0 1rem; /* Espaçamento lateral */
+    }
+
+    nav ul li a {
+        padding: 0.6rem 1rem; /* Reduz o padding para economizar espaço */
+        font-size: 0.9rem; /* Diminui um pouco o tamanho da fonte */
     }
 }
 
@@ -329,7 +335,7 @@ button:hover {
 
     nav ul li {
         flex: 0 0 auto; /* Evita que os itens se expandam */
-    }
+    }  
 }
 
 /* ============== ANIMAÇÕES ============== */
