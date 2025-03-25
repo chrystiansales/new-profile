@@ -43,6 +43,7 @@ nav {
     box-shadow: var(--box-shadow);
 }
 
+
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -221,11 +222,21 @@ button:hover {
     #home h1 {
         font-size: 2.8rem;
     }
+
+    nav ul {
+        flex-wrap: nowrap; /* Garante que os itens fiquem em linha */
+        justify-content: center; /* Centraliza os itens */
+    }
 }
 
 @media (max-width: 992px) {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 }
 
@@ -279,6 +290,12 @@ button:hover {
     .contact-info p {
         justify-content: center;
     }
+
+    nav ul {
+        flex-direction: row; /* Mantém os itens lado a lado */
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 576px) {
@@ -300,6 +317,18 @@ button:hover {
 
     button {
         width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+        padding: 0 1rem; /* Espaçamento lateral para evitar que encoste na borda */
+    }
+
+    nav ul li {
+        flex: 0 0 auto; /* Evita que os itens se expandam */
     }
 }
 
