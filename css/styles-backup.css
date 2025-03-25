@@ -1,53 +1,62 @@
-/* Reset e Estilos Gerais */
+/* styles.css */
+/* ============== ESTILOS GERAIS ============== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     color: #333;
+    line-height: 1.6;
 }
 
-/* Navegação */
+/* ============== NAVEGAÇÃO ============== */
 nav {
     background: #2c3e50;
     padding: 1rem;
     position: fixed;
     width: 100%;
-    top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
     list-style: none;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     transition: all 0.3s;
+    border-radius: 4px;
 }
 
 nav ul li a:hover {
     background: #34495e;
 }
 
-/* Seções */
+/* ============== SEÇÕES ============== */
 section {
-    padding: 5rem 2rem;
+    padding: 7rem 2rem 3rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
 }
 
-/* Home */
+/* ============== HOME ============== */
 #home {
     background: #3498db;
     color: white;
@@ -57,70 +66,86 @@ section {
 }
 
 #home h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
 }
 
 #home p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .skill-item {
     background: rgba(255,255,255,0.1);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-/* Sobre */
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+/* ============== SOBRE ============== */
 #sobre {
     background: white;
 }
 
 .timeline {
-    position: relative;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .timeline-item {
-    padding: 2rem;
     background: #f8f9fa;
-    margin: 2rem 0;
+    padding: 2rem;
+    margin: 1.5rem 0;
     border-radius: 8px;
-    position: relative;
     border-left: 4px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Serviços */
+/* ============== SERVIÇOS ============== */
 #servicos .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-card {
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    background: var(--service-card-bg);  /* Garantir que o fundo não mude */
 }
 
-/* Contato */
+/* ============== CONTATO ============== */
 #contato {
     background: #ecf0f1;
 }
@@ -128,136 +153,141 @@ section {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .contact-info {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.contact-info p {
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 input, textarea {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 button {
     background: #3498db;
     color: white;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 button:hover {
     background: #2980b9;
 }
 
-/* Responsivo 
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+/* ============== RESPONSIVIDADE ============== */
+@media (max-width: 1200px) {
+    #home h1 {
+        font-size: 2.8rem;
     }
 }
-*/
 
-/* fasdlkjflaksjfklasdj c*/
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-/* styles.css */
-
-/* ================ RESPONSIVO ================ */
 @media (max-width: 768px) {
-    /* Ajustes gerais */
-    h1 {
-        font-size: 2.5rem !important;
-        line-height: 1.2;
+    /* GERAL */
+    section {
+        padding: 6rem 1.5rem 2rem;
     }
 
-    p {
+    /* NAVEGAÇÃO */
+    nav ul li {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 0.8rem;
+    }
+
+    /* HOME */
+    #home h1 {
+        font-size: 2.2rem;
+    }
+
+    #home p {
         font-size: 1.2rem;
     }
 
-    /* Navegação */
-    nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    /* Home */
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        max-width: 500px;
     }
 
-    .skill-item {
-        padding: 1rem;
-    }
-
-    /* Sobre */
+    /* SOBRE */
     .timeline-item {
-        padding: 1rem;
-        margin: 1rem 0;
+        padding: 1.5rem;
     }
 
-    /* Serviços */
+    /* SERVIÇOS */
     #servicos .grid {
         grid-template-columns: 1fr;
     }
 
-    .service-card {
-        padding: 1.5rem;
-    }
-
-    /* Contato */
+    /* CONTATO */
     .contact-grid {
-        gap: 1.5rem;
-        padding: 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 600px;
     }
 
     .contact-info {
-        padding: 1rem;
-    }
-
-    form input,
-    form textarea {
-        padding: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajustes extras para telas muito pequenas */
-    #home {
-        padding: 3rem 1rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        width: 50%;
+        order: -1;
+        padding: 2rem;
         text-align: center;
     }
 
     .contact-info p {
-        font-size: 0.9rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    /* HOME */
+    #home h1 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .skill-item {
+        padding: 1.5rem;
+    }
+
+    /* CONTATO */
+    .contact-info {
+        padding: 1.5rem;
     }
 
     button {
@@ -265,19 +295,16 @@ button:hover {
     }
 }
 
+/* ============== ANIMAÇÕES ============== */
+@media (prefers-reduced-motion: no-preference) {
+    .timeline-item, .service-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
 
-/* Garante que imagens/ícones sejam responsivos */
-img, i {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Melhora a legibilidade em mobile */
-body {
-    line-height: 1.6;
-}
-
-/* Previne overflow horizontal */
-html, body {
-    overflow-x: hidden;
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

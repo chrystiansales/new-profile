@@ -12,20 +12,35 @@ html {
     overflow-x: hidden;
 }
 
+/* ============== VARIÁVEIS DE COR ============== */
+:root {
+    --primary-bg: #3498db;             /* Cor de fundo principal */
+    --primary-color: white;            /* Cor principal do texto */
+    --secondary-bg: #2c3e50;           /* Cor de fundo da navegação */
+    --hover-bg: #34495e;               /* Cor do fundo no hover de navegação */
+    --section-bg: #f5f5f5;             /* Cor de fundo das seções */
+    --service-card-bg: white;          /* Cor de fundo dos cartões de serviço */
+    --service-card-hover-bg: rgba(255, 255, 255, 0.1);  /* Cor de fundo do hover do cartão de serviço */
+    --skill-item-bg: rgba(255, 255, 255, 0.1);  /* Cor de fundo dos itens de habilidade */
+    --contact-bg: #ecf0f1;             /* Cor de fundo do contato */
+    --timeline-item-bg: #f8f9fa;      /* Cor de fundo dos itens da linha do tempo */
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Sombra padrão */
+}
+
+/* ============== ESTILOS GERAIS ============== */
 body {
-    background: #f5f5f5;
+    background: var(--section-bg);
     color: #333;
     line-height: 1.6;
 }
 
-/* ============== NAVEGAÇÃO ============== */
 nav {
-    background: #2c3e50;
+    background: var(--secondary-bg);
     padding: 1rem;
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--box-shadow);
 }
 
 nav ul {
@@ -37,7 +52,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     padding: 0.8rem 1.5rem;
     transition: all 0.3s;
@@ -45,7 +60,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #34495e;
+    background: var(--hover-bg);
 }
 
 /* ============== SEÇÕES ============== */
@@ -58,8 +73,8 @@ section {
 
 /* ============== HOME ============== */
 #home {
-    background: #3498db;
-    color: white;
+    background: var(--primary-bg);
+    color: var(--primary-color);
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +90,7 @@ section {
     margin-bottom: 3rem;
 }
 
+/* ============== GRID DE HABILIDADES ============== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -85,7 +101,7 @@ section {
 }
 
 .skill-item {
-    background: rgba(255,255,255,0.1);
+    background: var(--skill-item-bg);
     padding: 2rem;
     border-radius: 10px;
     transition: transform 0.3s;
@@ -103,7 +119,7 @@ section {
 
 /* ============== SOBRE ============== */
 #sobre {
-    background: white;
+    background: var(--primary-color);
 }
 
 .timeline {
@@ -113,12 +129,12 @@ section {
 }
 
 .timeline-item {
-    background: #f8f9fa;
+    background: var(--timeline-item-bg);
     padding: 2rem;
     margin: 1.5rem 0;
     border-radius: 8px;
-    border-left: 4px solid #3498db;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary-bg);
+    box-shadow: var(--box-shadow);
 }
 
 /* ============== SERVIÇOS ============== */
@@ -132,21 +148,22 @@ section {
 }
 
 .service-card {
-    background: white;
+    background: var(--service-card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s;
 }
 
 .service-card:hover {
+    background: var(--service-card-hover-bg);
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* ============== CONTATO ============== */
 #contato {
-    background: #ecf0f1;
+    background: var(--contact-bg);
 }
 
 .contact-grid {
@@ -159,10 +176,10 @@ section {
 }
 
 .contact-info {
-    background: white;
+    background: var(--service-card-bg);
     padding: 2.5rem;
     border-radius: 10px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info p {
@@ -186,8 +203,8 @@ input, textarea {
 }
 
 button {
-    background: #3498db;
-    color: white;
+    background: var(--primary-bg);
+    color: var(--primary-color);
     padding: 1.2rem 2.5rem;
     border: none;
     border-radius: 5px;
@@ -213,12 +230,10 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    /* GERAL */
     section {
         padding: 6rem 1.5rem 2rem;
     }
 
-    /* NAVEGAÇÃO */
     nav ul li {
         flex: 1 1 100%;
         text-align: center;
@@ -228,7 +243,6 @@ button:hover {
         padding: 0.8rem;
     }
 
-    /* HOME */
     #home h1 {
         font-size: 2.2rem;
     }
@@ -242,17 +256,14 @@ button:hover {
         max-width: 500px;
     }
 
-    /* SOBRE */
     .timeline-item {
         padding: 1.5rem;
     }
 
-    /* SERVIÇOS */
     #servicos .grid {
         grid-template-columns: 1fr;
     }
 
-    /* CONTATO */
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -271,7 +282,6 @@ button:hover {
 }
 
 @media (max-width: 576px) {
-    /* HOME */
     #home h1 {
         font-size: 1.8rem;
     }
@@ -284,7 +294,6 @@ button:hover {
         padding: 1.5rem;
     }
 
-    /* CONTATO */
     .contact-info {
         padding: 1.5rem;
     }
