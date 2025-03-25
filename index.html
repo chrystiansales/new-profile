@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrystian Pereira Sales - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">          
+</head>
+<body>
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <h1>Chrystian Pereira Sales</h1>
+        <p>Profissional com sólida experiência em Tecnologia da Informação</p>
+        
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fas fa-network-wired"></i>
+                <h3>Redes e Infraestrutura</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <h3>Banco de Dados</h3>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <h3>Desenvolvimento</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Chefe de Núcleo de Suporte Técnico (2019-2024)</h3>
+                <p>Departamento Estadual de Estradas de Rodagem e Transportes</p>
+                <ul>
+                    <li>Gestão de equipes e projetos</li>
+                    <li>Otimização de processos</li>
+                    <li>Elaboração de relatórios gerenciais</li>
+                </ul>
+            </div>
+            
+            <!-- Adicionar outros itens da timeline -->
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <div class="grid">
+            <div class="service-card">
+                <h3><i class="fas fa-shield-alt"></i> Segurança de Redes</h3>
+                <ul>
+                    <li>Firewall e VPN</li>
+                    <li>Configuração de servidores</li>
+                    <li>Monitoramento de redes</li>
+                </ul>
+            </div>
+            
+            <!-- Adicionar outros cards de serviços -->
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contato</h2>
+                <p><i class="fas fa-envelope"></i> chrystianps@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (69) 98454-2526</p>
+                <p><i class="fas fa-map-marker-alt"></i> Porto Velho, RO</p>
+            </div>
+            
+            <form id="contactForm">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animação ao scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.timeline-item, .service-card').forEach((el) => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s';
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso!');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
