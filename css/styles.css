@@ -336,6 +336,55 @@ button:hover {
     nav ul li {
         flex: 0 0 auto; /* Evita que os itens se expandam */
     }  
+
+    @media (max-width: 400px) {
+        #home h1 {
+            font-size: 1.5rem;
+        }
+    
+        #home p {
+            font-size: 0.9rem;
+        }
+    
+        .skills-grid,
+        .contact-grid,
+        #servicos .grid {
+            grid-template-columns: 1fr; /* Apenas uma coluna para evitar aperto */
+        }
+    
+        nav ul {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto; /* Permite rolagem horizontal se necessário */
+            justify-content: flex-start;
+            padding: 0 0.5rem; /* Ajuste para evitar bordas grudadas */
+        }
+    
+        nav ul li {
+            flex: 0 0 auto;
+        }
+    
+        nav ul li a {
+            padding: 0.6rem 1rem; /* Reduz tamanho do botão */
+            font-size: 0.85rem; /* Reduz tamanho da fonte */
+        }
+    
+        button {
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+    
+        .skill-item {
+            padding: 1.2rem;
+        }
+    
+        .contact-info {
+            padding: 1.2rem;
+            text-align: center;
+        }
+    }
+
 }
 
 /* ============== ANIMAÇÕES ============== */
