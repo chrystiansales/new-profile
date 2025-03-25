@@ -157,66 +157,24 @@ section {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
-
-    /* SOBRE */
-    .timeline-item {
-        padding: 1rem;
-    }
-
-    /* SERVIÇOS */
-    #servicos .grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* CONTATO */
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .contact-info {
-        order: -1;
-    }
-
-
-    #contato {
-        padding-top: 4rem;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .contact-info {
-        order: -1; /* Coloca as informações acima do formulário */
-        text-align: center;
-        padding: 1.5rem !important;
-    }
-
-    .contact-info p {
-        margin: 0.8rem 0;
-        font-size: 0.95rem;
-    }
-
-    form {
         width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    input, textarea {
-        font-size: 0.9rem !important;
+    .skill-item {
+        padding: 1.2rem;
+        margin: 0 0.5rem;
     }
 
-    button {
-        width: 100%;
-        padding: 1rem !important;
-    }   
+    .skill-item i {
+        font-size: 2rem !important; /* Tamanho dos ícones */
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-item h3 {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -232,39 +190,21 @@ section {
     .skill-item {
         padding: 1.5rem;
     }
-
-    /* NAVEGAÇÃO */
-    nav ul li a {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-
-    /* FORMULÁRIO */
-    form input, form textarea {
-        width: 100%;
-    }
-
-    .contact-info p {
-        font-size: 0.85rem;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-        font-size: 0.8rem;
-    }
-    
 }
 
-/* ============== ANIMAÇÕES ============== */
-@media (prefers-reduced-motion: no-preference) {
-    .timeline-item, .service-card {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease-out;
-    }
 
-    .visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Garante que imagens/ícones sejam responsivos */
+img, i {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Melhora a legibilidade em mobile */
+body {
+    line-height: 1.6;
+}
+
+/* Previne overflow horizontal */
+html, body {
+    overflow-x: hidden;
 }
