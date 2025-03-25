@@ -178,59 +178,90 @@ button:hover {
 }
 */
 
-
+/* fasdlkjflaksjfklasdj c*/
 
 /* styles.css */
 
-/* ====== AJUSTES ESPECÍFICOS PARA HOME MOBILE ====== */
+/* ================ RESPONSIVO ================ */
 @media (max-width: 768px) {
-    #home {
-        padding: 4rem 1rem !important;
-        text-align: center;
+    /* Ajustes gerais */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
     }
 
-    #home h1 {
-        font-size: 2rem !important;
-        margin-bottom: 0.5rem;
+    p {
+        font-size: 1.2rem;
     }
 
-    #home p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
+    /* Navegação */
+    nav ul li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
     }
 
+    /* Home */
     .skills-grid {
-        width: 100%;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .skill-item {
-        padding: 1.2rem;
-        margin: 0 0.5rem;
+        padding: 1rem;
     }
 
-    .skill-item i {
-        font-size: 2rem !important; /* Tamanho dos ícones */
-        margin-bottom: 0.5rem;
+    /* Sobre */
+    .timeline-item {
+        padding: 1rem;
+        margin: 1rem 0;
     }
 
-    .skill-item h3 {
-        font-size: 1.1rem;
+    /* Serviços */
+    #servicos .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    /* Contato */
+    .contact-grid {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .contact-info {
+        padding: 1rem;
+    }
+
+    form input,
+    form textarea {
+        padding: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
-    #home h1 {
-        font-size: 1.8rem !important;
+    /* Ajustes extras para telas muito pequenas */
+    #home {
+        padding: 3rem 1rem;
     }
 
-    #home p {
-        font-size: 1rem;
+    nav ul {
+        flex-wrap: wrap;
     }
 
-    .skill-item {
-        padding: 1rem;
+    nav ul li {
+        width: 50%;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
     }
 }
 
