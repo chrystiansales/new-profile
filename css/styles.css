@@ -264,3 +264,20 @@ button:hover {
         width: 100%;
     }
 }
+
+
+/* Garante que imagens/ícones sejam responsivos */
+img, i {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Melhora a legibilidade em mobile */
+body {
+    line-height: 1.6;
+}
+
+/* Previne overflow horizontal */
+html, body {
+    overflow-x: hidden;
+}
