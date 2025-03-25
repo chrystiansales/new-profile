@@ -216,10 +216,7 @@ section {
     button {
         width: 100%;
         padding: 1rem !important;
-    }
-
-
-    
+    }   
 }
 
 @media (max-width: 480px) {
@@ -245,6 +242,15 @@ section {
     /* FORMULÁRIO */
     form input, form textarea {
         width: 100%;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 0.8rem;
     }
 }
 
