@@ -223,10 +223,8 @@ button:hover {
     }
 
     nav ul {
-        flex-wrap: nowrap;
-        /* Garante que os itens fiquem em linha */
-        justify-content: center;
-        /* Centraliza os itens */
+        flex-wrap: nowrap;        /* Garante que os itens fiquem em linha */
+        justify-content: center;  /* Centraliza os itens */
     }
 }
 
@@ -293,21 +291,15 @@ button:hover {
     }
 
     nav ul {
-        flex-wrap: nowrap;
-        /* Garante que os itens fiquem em uma única linha */
-        overflow-x: auto;
-        /* Adiciona rolagem horizontal se necessário */
-        justify-content: flex-start;
-        /* Alinha os itens à esquerda */
-        padding: 0 1rem;
-        /* Espaçamento lateral */
+        flex-wrap: nowrap;           /* Garante que os itens fiquem em uma única linha */
+        overflow-x: auto;            /* Adiciona rolagem horizontal se necessário */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+        padding: 0 1rem;             /* Espaçamento lateral */
     }
 
     nav ul li a {
-        padding: 0.6rem 1rem;
-        /* Reduz o padding para economizar espaço */
-        font-size: 0.9rem;
-        /* Diminui um pouco o tamanho da fonte */
+        padding: 0.6rem 1rem;        /* Reduz o padding para economizar espaço */
+        font-size: 0.9rem;           /* Diminui um pouco o tamanho da fonte */
     }
 }
 
@@ -344,16 +336,13 @@ button:hover {
     }
 
     nav ul li {
-        flex: 0 0 auto;
-        /* Evita que os itens se expandam */
+        flex: 0 0 auto;              /* Evita que os itens se expandam */
     }
 
 
     nav ul li a {
-        font-size: 0.8rem;
-        /* Diminui um pouco mais o tamanho da fonte */
-        padding: 0.5rem 0.8rem;
-        /* Reduz o espaçamento interno */
+        font-size: 0.8rem;           /* Diminui um pouco mais o tamanho da fonte */
+        padding: 0.5rem 0.8rem;      /* Reduz o espaçamento interno */
     }
 }
 
@@ -374,12 +363,13 @@ button:hover {
     }
 
     nav ul {
+        flex-direction: row;                        
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: 0 0.3rem;       /* Reduz ainda mais o espaçamento lateral */
-        white-space: nowrap;     /* Evita quebra de linha nos itens do menu */
+        padding: 0 0.3rem;           /* Reduz ainda mais o espaçamento lateral */        
+        white-space: nowrap;         /* Evita quebra de linha nos itens do menu */
         justify-content: center;     /* Alinha os itens à esquerda */
-        align-items: center;         /* Alinha o menu à esquerda - CHRYSTIAN */        
+        align-items: center;         /* Alinha o menu à esquerda - CHRYSTIAN */                
     }
 
     nav ul li {
@@ -387,10 +377,8 @@ button:hover {
     }
 
     nav ul li a {
-        font-size: 0.8rem;
-        /* Diminui um pouco mais o tamanho da fonte */
-        padding: 0.5rem 0.8rem;
-        /* Reduz o espaçamento interno */
+        font-size: 0.8rem;           /* Diminui um pouco mais o tamanho da fonte */
+        padding: 0.5rem 0.8rem;      /* Reduz o espaçamento interno */
     }
 
     button {
@@ -421,18 +409,15 @@ button:hover {
     .skills-grid,
     .contact-grid,
     #servicos .grid {
-        grid-template-columns: 1fr;
-        /* Apenas uma coluna para otimizar espaço */
+        grid-template-columns: 1fr;      /* Apenas uma coluna para otimizar espaço */
     }
 
     nav ul {
         flex-direction: row;
         flex-wrap: nowrap;
-        overflow-x: auto;
-        /* Permite rolagem horizontal se necessário */
+        overflow-x: auto;               /* Permite rolagem horizontal se necessário */
         justify-content: flex-start;
-        padding: 0 0.3rem;
-        /* Menos espaço lateral para evitar cortes */
+        padding: 0 0.3rem;              /* Menos espaço lateral para evitar cortes */
     }
 
     nav ul li {
@@ -440,10 +425,8 @@ button:hover {
     }
 
     nav ul li a {
-        padding: 0.5rem 0.8rem;
-        /* Reduz tamanho do botão */
-        font-size: 0.75rem;
-        /* Fonte menor para caber melhor */
+        padding: 0.5rem 0.8rem;         /* Reduz tamanho do botão */
+        font-size: 0.75rem;             /* Fonte menor para caber melhor */
     }
 
     button {
@@ -467,7 +450,6 @@ button:hover {
         overflow-wrap: break-word;
     }
 }
-
 
 /* ============== ANIMAÇÕES ============== */
 @media (prefers-reduced-motion: no-preference) {
