@@ -365,11 +365,11 @@ button:hover {
     nav ul {
         flex-direction: row;                        
         flex-wrap: nowrap;
-        overflow-x: auto; 
+        overflow-x: auto;
         padding: 0 0.3rem;          
         white-space: nowrap;        
         justify-content: center;     
-        align-items: center;         
+        align-items: center; 
     }
 
     nav ul li {
