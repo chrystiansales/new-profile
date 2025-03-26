@@ -351,13 +351,13 @@ button:hover {
         #servicos .grid {
             grid-template-columns: 1fr; /* Apenas uma coluna para evitar aperto */
         }
-              
+    
         nav ul {
+            flex-direction: row;
             flex-wrap: nowrap;
-            overflow-x: auto; 
+            overflow-x: auto; /* Permite rolagem horizontal se necessário */
             justify-content: flex-start;
-            padding: 0 0.3rem; /* Reduz ainda mais o espaçamento lateral */
-            white-space: nowrap; /* Evita quebra de linha nos itens do menu */
+            padding: 0 0.5rem; /* Ajuste para evitar bordas grudadas */
         }
     
         nav ul li {
@@ -365,8 +365,8 @@ button:hover {
         }
     
         nav ul li a {
-            font-size: 0.8rem; /* Diminui um pouco mais o tamanho da fonte */
-            padding: 0.5rem 0.8rem; /* Reduz o espaçamento interno */
+            padding: 0.6rem 1rem; /* Reduz tamanho do botão */
+            font-size: 0.85rem; /* Reduz tamanho da fonte */
         }
     
         button {
