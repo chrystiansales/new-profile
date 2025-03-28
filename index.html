@@ -9,7 +9,9 @@
     <meta name="author" content="Chrystian P. Sales">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js" defer></script>
+    <!-- <script src="js/scripts.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/email.js" defer></script> <!-- Carrega o script externo corretamente -->
     <title>Meu Portfólio</title>
 </head>
 
@@ -226,16 +228,23 @@
             </div>
 
             <form id="contactForm">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <textarea rows="5" placeholder="Mensagem" required></textarea>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required pattern="[A-Za-zÀ-ú\s]{3,}"
+                    title="Mínimo 3 caracteres (apenas letras)">
+
+                <input type="email" id="email" name="email" placeholder="Email" required
+                    title="Exemplo: usuario@provedor.com">
+
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Mensagem" required minlength="10"
+                    title="Mínimo 10 caracteres"></textarea>
+
                 <button type="submit">Enviar</button>
             </form>
+            <p id="status" aria-live="polite"></p>
         </div>
     </section>
-    
-    <!-- Scripts externos -->
-    <script src="js/scripts.js" defer></script>
+
+   <!-- Scripts externos -->
+   <!-- <script src="js/scripts.js" defer></script> -->
 </body>
 
 </html>

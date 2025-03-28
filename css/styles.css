@@ -216,6 +216,20 @@ button:hover {
     background: #2980b9;
 }
 
+#status {
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+input:invalid, textarea:invalid {
+    border-color: #ff4444;
+}
+
+input:valid, textarea:valid {
+    border-color: #00C851;
+}
+
 /* ============== RESPONSIVIDADE ============== */
 @media (max-width: 1200px) {
     #home h1 {
