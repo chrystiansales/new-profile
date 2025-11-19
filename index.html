@@ -3,249 +3,551 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="site contendo informações sobre perfil profissional">
-    <meta name="keyword" content="programacao,html,css, javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Chrystian P. Sales - Profissional de TI especializado em redes, banco de dados e desenvolvimento de sistemas">
+    <meta name="keywords" content="TI, redes, banco de dados, desenvolvimento, suporte técnico, SQL Server, Delphi">
     <meta name="author" content="Chrystian P. Sales">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chrystian P. Sales - Portfólio">
+    <meta property="og:description" content="Profissional de TI com experiência em redes, banco de dados e desenvolvimento">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>  <!--envio de e-mail-->
-    <script src="js/scripts.js" defer></script>    
-    <script src="js/email.js" defer></script> <!-- Carrega o script externo corretamente -->
-    <title>Meu Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+    <script src="js/email.js" defer></script>
+
+    <title>Chrystian P. Sales | Portfólio</title>
 </head>
 
 <body>
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <!-- Navegação -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">CP</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Seção Home -->
-    <section id="home">
-        <h1>Chrystian P. Sales</h1>
-        <p>Profissional com sólida experiência em Tecnologia da Informação</p>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="fas fa-network-wired"></i>
-                <h3>Redes e Infraestrutura</h3>
+    <!-- Seção Home / Hero -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+            <div class="gradient-sphere sphere-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Disponível para projetos
             </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <h3>Banco de Dados</h3>
+
+            <h1 class="hero-title">
+                <span class="greeting">Olá, eu sou</span>
+                <span class="name">Chrystian P. Sales</span>
+                <span class="role">
+                    <span class="role-text"></span>
+                    <span class="cursor-blink">|</span>
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                Profissional com <strong>+20 anos</strong> de experiência em Tecnologia da Informação,
+                especializado em infraestrutura de redes, banco de dados e desenvolvimento de sistemas.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contato" class="btn btn-primary">
+                    <span>Entrar em contato</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#sobre" class="btn btn-secondary">
+                    <span>Conhecer mais</span>
+                </a>
             </div>
-            <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <h3>Desenvolvimento</h3>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-computer"></i>
-                <h3>Suporte Técnico</h3>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="20">0</span>
+                    <span class="stat-label">Anos de experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Projetos realizados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Clientes satisfeitos</span>
+                </div>
             </div>
         </div>
+
+        <a href="#sobre" class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow">
+                <i class="fas fa-chevron-down"></i>
+            </span>
+        </a>
     </section>
 
     <!-- Seção Sobre -->
     <section id="sobre">
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>Profissional com sólida experiência em Tecnologia da Informação.</h3>
-                <p> Atuando em suporte técnico, administração de redes e desenvolvimento de sistemas desktop. Destaca-se
-                    pela liderança de equipes, com foco na organização e na gestão eficiente de projetos e
-                    atividades,utilizando ferramentas como o Trello para otimizar a comunicação e o acompanhamento das
-                    demandas. Possui amplo conhecimento em bancos de dados Microsoft SQL Server,desenvolvimento de
-                    software com Borland Delphi e domínio de ferramentas como MicrosoftExcel e Access. Experiência
-                    adicional em tecnologias como Firewall, Windows Server e Veeam.</p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Trajetória</span>
+                <h2 class="section-title">Minha Experiência</h2>
+                <p class="section-subtitle">Uma jornada de mais de duas décadas em Tecnologia da Informação</p>
             </div>
 
-            <div class="timeline-item">
-                <h3>Chefe de Núcleo de Suporte Técnico (2019-2024)</h3>
-                <p>Departamento Estadual de Estradas de Rodagem e Transportes - DER</p>
-                <ul>
-                    <li>Descrição dos papéis e responsabilidades da equipe, considerando os recursos disponíveis e as
-                        metas de entrega.</li>
-                    <li>Monitoramento da qualidade do trabalho executado, realizando intervenções e sugestões de ajustes
-                        nos procedimentos às equipes,visando a melhora do desempenho.</li>
-                    <li>Elaboração de relatórios gerenciais das atividades, reunindo informações sobre a qualidade do
-                        trabalho desenvolvido a fim de encontrar soluções que aumentassem a eficiência na execução dos
-                        projetos.</li>
-                    <li>Planejamento e controle dos cronogramas, definindo as tarefas e etapas de realização do projeto
-                        com a inclusão das datas de início e término das atividades, facilitando o gerenciamento dos
-                        serviços para que o trabalho fosse entregue dentro do prazo.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Analista de Suporte (2014-2019)</h3>
-                <p>Dental Norte Assistência Odontológica</p>
-                <ul>
-                    <li>Projetar e prestar manutenção em redes de computadores.</li>
-                    <li>Responsável pela segurança dos recursos da rede (dados e serviços).</li>
-                    <li>Instalar, configurar e atualizar programas de anti-Vírus e anti-SpyWares.</li>
-                    <li>Criação e manutenção de rotinas de cópias de segurança (Backup).</li>
-                    <li>Instalar e manter a comunicação digital (correio eletrônico, WEB, FTP,VPN, etc.).</li>
-                    <li>Configurar as contas de correio eletrônico (E-mail).</li>
-                    <li>Interligar as possíveis filias por WAN através de VPN´s ou outros recursos.</li>
-                    <li>Prover sistemas de mídia digital (VOIP, vídeo-conferência, etc.).</li>
-                    <li>Instalar e manter sistemas de gestão (ERP).</li>
-                    <li>Instalar e manter sistemas de banco de dados (SGBD).</li>
-                    <li>Suporte aos usuários da empresa ou organização.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Programador (2011-2014)</h3>
-                <p>Secretaria de Finanças do Estado de Rondônia - SEFIN</p>
-                <ul>
-                    <li>Analise e desenvolvimento em MAKER, Delphi 7 e Natural.</li>
-                    <li>Banco de Dados ORACLE - criação de relatórios via PL/SQL.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Analista de Sistemas (2012-2013)</h3>
-                <p>Faculdades Integradas Aparício Carvalho - FIMCA</p>
-                <ul>
-                    <li>Migração de Dados entre diferentes fontes de dados e/ou diferentes layout's.</li>
-                    <li>Delphi 7/MS SQL SERVER - Desenvolvimento de Softwares de Apoio.</li>
-                    <li>Banco de Dados MS SQL SERVER - criação de relatórios.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Programador de sistemas de computador (2004-2010)</h3>
-                <p>União das Escolas Superiores de Porto Velho - UNIRON </p>
-                <ul>
-                    <li>Administrador de Redes - Projeta e implementa a infra-estrutura para soluções comerciais
-                        baseadas na plataforma do Microsoft Windows 2000 e servidores Microsoft. As responsabilidades da
-                        implementação incluem instalação, configuração e solução de problemas.</li>
-                    <li>Delphi 7/MS SQL Server 2000 - Desenvolvimento de Softwares de Apoio.</li>
-                    <li>Banco de Dados ORACLE - criação de relatórios via PL/SQL.</li>
-                    <li>Coordenador de TI – Organizar equipe, trazer propostas de novas tecnologias.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Administrador de Banco de Dados (2003-2003)</h3>
-                <p>Ameron Assistência Médica e Odontológica</p>
-                <ul>
-                    <li>Administrador de Banco de Dados - Cria projetos e administra bancos dedados físicos. Desenvolve:
-                        modelos de dados lógicos, serviços de dado sutilizando Transact-SQL, controle da segurança,
-                        monitoramento e otimização do banco de dados.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Assistente de Informação Junior I (2002-2003)</h3>
-                <p>Takeda Comércio Ltda</p>
-                <ul>
-                    <li>Suporte Hardware e Rede - (Apto a montar, efetuar manutenção preventiva e corretiva de
-                        microcomputadores e periféricos, bem como instalar fisicamente uma rede de microcomputadores
-                        através do cabeamento estruturado.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Auxiliar de Escritório (1999-2002)</h3>
-                <p>Hospital das Clínicas</p>
-                <ul>
-                    <li>Auxílio nas rotinas administrativas, organizando documentos e realizando tarefas variadas,
-                        colaborando com o bom andamento das atividades.</li>
-                    <li>Arquivamento de documentos físicos e digitais, contribuindo para a organização administrativa e
-                        legal da empresa.</li>
-                    <li>Preenchimento da planilha de controle mensal, auxiliando o setor financeiro com a emissão de
-                        relatórios de contas a pagar e receber.</li>
-                </ul>
+            <div class="about-intro">
+                <div class="about-text glass-card">
+                    <p>
+                        Profissional com sólida experiência em <strong>Tecnologia da Informação</strong>,
+                        atuando em suporte técnico, administração de redes e desenvolvimento de sistemas desktop.
+                    </p>
+                    <p>
+                        Destaca-se pela <strong>liderança de equipes</strong>, com foco na organização e na gestão
+                        eficiente de projetos e atividades, utilizando ferramentas como o Trello para otimizar
+                        a comunicação e o acompanhamento das demandas.
+                    </p>
+                    <p>
+                        Possui amplo conhecimento em bancos de dados <strong>Microsoft SQL Server</strong>,
+                        desenvolvimento de software com <strong>Borland Delphi</strong> e domínio de ferramentas
+                        como Microsoft Excel e Access. Experiência adicional em tecnologias como Firewall,
+                        Windows Server e Veeam.
+                    </p>
+                </div>
             </div>
 
-            <!-- Adicionar outros itens da timeline -->
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2019 - 2024</span>
+                        <h3>Chefe de Núcleo de Suporte Técnico</h3>
+                        <h4>DER - Departamento Estadual de Estradas de Rodagem e Transportes</h4>
+                        <ul>
+                            <li>Descrição dos papéis e responsabilidades da equipe, considerando os recursos disponíveis e as metas de entrega</li>
+                            <li>Monitoramento da qualidade do trabalho executado, realizando intervenções e sugestões de ajustes nos procedimentos</li>
+                            <li>Elaboração de relatórios gerenciais das atividades</li>
+                            <li>Planejamento e controle dos cronogramas de projetos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2014 - 2019</span>
+                        <h3>Analista de Suporte</h3>
+                        <h4>Dental Norte Assistência Odontológica</h4>
+                        <ul>
+                            <li>Projetar e prestar manutenção em redes de computadores</li>
+                            <li>Responsável pela segurança dos recursos da rede (dados e serviços)</li>
+                            <li>Criação e manutenção de rotinas de backup</li>
+                            <li>Instalar e manter sistemas de gestão (ERP) e banco de dados (SGBD)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2011 - 2014</span>
+                        <h3>Programador</h3>
+                        <h4>SEFIN - Secretaria de Finanças do Estado de Rondônia</h4>
+                        <ul>
+                            <li>Análise e desenvolvimento em MAKER, Delphi 7 e Natural</li>
+                            <li>Banco de Dados ORACLE - criação de relatórios via PL/SQL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2004 - 2010</span>
+                        <h3>Programador de Sistemas / Coordenador de TI</h3>
+                        <h4>UNIRON - União das Escolas Superiores de Porto Velho</h4>
+                        <ul>
+                            <li>Administrador de Redes - implementação de soluções em Microsoft Windows 2000</li>
+                            <li>Desenvolvimento em Delphi 7/MS SQL Server 2000</li>
+                            <li>Banco de Dados ORACLE - criação de relatórios via PL/SQL</li>
+                            <li>Coordenação de TI – organização de equipe e propostas de novas tecnologias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Competências</span>
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Microsoft SQL Server</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Oracle / PL-SQL</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Desenvolvimento</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Delphi</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML / CSS / JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-server"></i> Infraestrutura</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Windows Server</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Redes / Firewall / VPN</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Veeam Backup</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-tools"></i> Ferramentas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Excel Avançado</span>
+                        <span class="skill-tag">Access</span>
+                        <span class="skill-tag">Trello</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">DHCP</span>
+                        <span class="skill-tag">DNS</span>
+                        <span class="skill-tag">GPO</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Seção Serviços -->
     <section id="servicos">
-        <div class="grid">
-            <div class="service-card">
-                <h3><i class="fas fa-network-wired"></i> Redes e Infraestrutura</h3>
-                <ul>
-                    <li>Configuração de redes locais</li>
-                    <li>Manutenção de infraestrutura de TI</li>
-                    <li>Gerenciamento de servidores</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-database"></i> Banco de Dados</h3>
-                <ul>
-                    <li>Administração de bancos de dados</li>
-                    <li>Otimização de consultas SQL</li>
-                    <li>Backup e recuperação de dados</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-laptop-code"></i> Programação Desktop</h3>
-                <ul>
-                    <li>Desenvolvimento de sistemas desktop</li>
-                    <li>Manutenção de aplicações legadas</li>
-                    <li>Integração com bancos de dados</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-shield-alt"></i> Segurança de Redes</h3>
-                <ul>
-                    <li>Firewall e VPN</li>
-                    <li>Configuração de servidores</li>
-                    <li>Monitoramento de redes</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-headset"></i> Suporte Técnico</h3>
-                <ul>
-                    <li>Atendimento ao usuário</li>
-                    <li>Resolução de problemas técnicos</li>
-                    <li>Manutenção de hardware e software</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-sync-alt"></i> Integração de Sistemas</h3>
-                <ul>
-                    <li>Integração entre sistemas legados e modernos</li>
-                    <li>Automatização de processos</li>
-                    <li>Desenvolvimento de APIs</li>
-                </ul>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Soluções</span>
+                <h2 class="section-title">Serviços</h2>
+                <p class="section-subtitle">Como posso ajudar seu negócio</p>
             </div>
 
-            <!-- Adicionar outros cards de serviços -->
+            <div class="services-grid">
+                <div class="service-card glass-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Redes e Infraestrutura</h3>
+                    <p>Projeto e implementação de redes locais, configuração de servidores e gerenciamento de infraestrutura de TI.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Configuração de redes</li>
+                        <li><i class="fas fa-check"></i> Manutenção de infraestrutura</li>
+                        <li><i class="fas fa-check"></i> Gerenciamento de servidores</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Banco de Dados</h3>
+                    <p>Administração, otimização e manutenção de bancos de dados SQL Server, Oracle e MySQL.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Administração de BD</li>
+                        <li><i class="fas fa-check"></i> Otimização de consultas</li>
+                        <li><i class="fas fa-check"></i> Backup e recuperação</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Desenvolvimento Desktop</h3>
+                    <p>Criação e manutenção de sistemas desktop robustos com integração a bancos de dados.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Sistemas em Delphi</li>
+                        <li><i class="fas fa-check"></i> Aplicações legadas</li>
+                        <li><i class="fas fa-check"></i> Integração com BD</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança de Redes</h3>
+                    <p>Implementação de soluções de segurança, firewall, VPN e monitoramento de redes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Firewall e VPN</li>
+                        <li><i class="fas fa-check"></i> Políticas de segurança</li>
+                        <li><i class="fas fa-check"></i> Monitoramento 24/7</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Atendimento especializado para resolução de problemas técnicos em hardware e software.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Atendimento ao usuário</li>
+                        <li><i class="fas fa-check"></i> Resolução de problemas</li>
+                        <li><i class="fas fa-check"></i> Manutenção preventiva</li>
+                    </ul>
+                </div>
+
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Integração de Sistemas</h3>
+                    <p>Conexão entre sistemas legados e modernos, automatização de processos e desenvolvimento de APIs.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Migração de dados</li>
+                        <li><i class="fas fa-check"></i> Automatização</li>
+                        <li><i class="fas fa-check"></i> APIs e integrações</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Seção Contato -->
     <section id="contato">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Contato</h2>
-                <p><i class="fas fa-envelope"></i> chrystianps@gmail.com</p>
-                <p><i class="fas fa-phone"></i> (69) 98454-2526</p>
-                <p><i class="fab fa-whatsapp"></i> (69) 99909-2526</p>
-                <p><i class="fas fa-map-marker-alt"></i> Porto Velho, RO</p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fale Comigo</span>
+                <h2 class="section-title">Contato</h2>
+                <p class="section-subtitle">Vamos conversar sobre seu projeto</p>
             </div>
 
-            <form id="contactForm">
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required pattern="[A-Za-zÀ-ú\s]{3,}"
-                    title="Mínimo 3 caracteres (apenas letras)">
+            <div class="contact-container contact-centered">
+                <div class="contact-info glass-card">
+                    <h3>Informações de Contato</h3>
+                    <p class="contact-intro">Estou disponível para novos projetos e oportunidades. Entre em contato!</p>
 
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required
-                    title="Exemplo: usuario@provedor.com">
+                    <div class="contact-items">
+                        <a href="mailto:chrystianps@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">E-mail</span>
+                                <span class="contact-value">chrystianps@gmail.com</span>
+                            </div>
+                        </a>
 
-                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite a mensagem" required minlength="10"
-                    title="Mínimo 10 caracteres"></textarea>
+                        <a href="tel:+5569984542526" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Telefone</span>
+                                <span class="contact-value">(69) 98454-2526</span>
+                            </div>
+                        </a>
 
-                <button type="submit">Enviar</button>
-            </form>
-            <p id="status" aria-live="polite"></p>
+                        <a href="https://wa.me/5569999092526" target="_blank" rel="noopener" class="contact-item whatsapp">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">WhatsApp</span>
+                                <span class="contact-value">(69) 99909-2526</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Localização</span>
+                                <span class="contact-value">Porto Velho, RO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/5569999092526" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Chamar no WhatsApp</span>
+                        </a>
+                        <a href="mailto:chrystianps@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            <span>Enviar E-mail</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Scripts externos -->
-    <!-- <script src="js/scripts.js" defer></script> -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-text">CP</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p>Transformando ideias em soluções tecnológicas</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chrystian P. Sales. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5569999092526" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 </body>
 
 </html>
